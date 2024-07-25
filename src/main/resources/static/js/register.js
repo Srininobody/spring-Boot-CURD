@@ -25,4 +25,15 @@ $(document).ready(function() {
             reader.readAsDataURL(file);
         }
     });
+    $('#saveDatas').on('click',function(){
+     alert('Save Button clicked')
+        var name =$('#name').val();
+        var email =$('#email').val();
+        var dob =$('#datepicker').val();
+        var radioValue = $("input[name='gender']:checked").val();
+        var country =$('#country').val();
+        var imageUpload = $('#imageUpload')[0].files[0];
+
+
+    });
 });
