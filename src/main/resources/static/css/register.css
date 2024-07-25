@@ -1,0 +1,11 @@
+.star{
+    color: red;
+}
+.form-control {
+    border: 2px solid #000000a6; /* Adjust the border width and color as needed */
+}
+.img-preview {
+    max-width: 100%;
+    max-height: 200px;
+    margin-top: 10px;
+}

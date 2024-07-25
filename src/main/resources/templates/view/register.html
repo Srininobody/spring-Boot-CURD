@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <!-- Load Bootstrap CSS first -->
+    <link rel="stylesheet" href="/front end resource/bootstrap/css/bootstrap.min.css">
+    <!-- Load Select2 CSS -->
+    <link rel="stylesheet" href="/front end resource/select2/css/select2.min.css">
+    <!-- Load Datepicker CSS last to ensure it overrides any conflicting styles -->
+    <link rel="stylesheet" href="/front end resource/datepicker/css/datepicker.min.css">
+    <!-- Your custom CSS files -->
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/datepickerStyle.css">
+</head>
+<body>
+<header>
+    <h2>Register Form</h2>
+</header>
+<div class="container">
+    <div class="form-group row">
+        <div class="col-2">
+            <label for="Name" class="control-label">Name<span class="star">*</span></label>
+        </div>
+        <div class="col-6">
+            <input type="text" class="form-control" name="Name" id="name" autocomplete="off">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label for="email" class="control-label">Email<span class="star">*</span></label>
+        </div>
+        <div class="col-6">
+            <input type="text" class="form-control" name="email" id="email" autocomplete="off">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label for="description" class="control-label">Date of Birth<span class="star">*</span></label>
+        </div>
+        <div class="col-6">
+            <input type="text" id="datepicker" placeholder="dd/mm/yyyy" autocomplete="off">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label for="description" class="control-label">Gender<span class="star">*</span></label>
+        </div>
+        <div class="col-6">
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female" required> Female</label>
+            <label><input type="radio" name="gender" value="transgender" required> Transgender</label>
+        </div>
+    </div>
+
+    <div class="form-group row ">
+        <div class="col-2">
+            <label for="country">Country<span class="star">*</span></label>
+        </div>
+        <div class="col-6">
+            <select id="country" name="country" class="form-control" required>
+                <option value="">Select a country</option>
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="GB">United Kingdom</option>
+                <option value="AU">Australia</option>
+                <option value="IN">India</option>
+                <!-- Add more country options as needed -->
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="imageUpload">Choose an image to upload:</label>
+        <input type="file" class="form-control-file" id="imageUpload" accept="image/*">
+    </div>
+    <div class="form-group">
+        <img id="imagePreview" class="img-preview d-none" alt="Image Preview">
+    </div>
+</div>
+<footer>
+</footer>
+<!-- Load jQuery before other scripts -->
+<script src="/front end resource/Jquery/jquery.min.js"></script>
+<!-- Load Bootstrap JS -->
+<script src="/front end resource/bootstrap/js/bootstrap.min.js"></script>
+<!-- Load Select2 JS -->
+<script src="/front end resource/select2/js/select2.min.js"></script>
+<!-- Load Datepicker JS -->
+<script src="/front end resource/datepicker/js/datepicker.min.js"></script>
+<!-- Your custom JS files -->
+<script src="/js/register.js"></script>
+<script>
+    $(function() {
+        $('#datepicker').datepicker({
+            format: 'dd/mm/yyyy',
+            startDate: '1960-01-01',
+            endDate: '+20y',
+            autoclose: true,
+            todayHighlight: true
+        });
+    });
+</script>
+</body>
+</html>

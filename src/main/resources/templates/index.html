@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <link rel="stylesheet" th:href="@{/front end resource/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <script th:src="@{/front end resource/Jquery/jquery.min.js}"></script>
+    <script th:src="@{/front end resource/bootstrap/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<header>
+    <h2>Welcome to Spring Boot</h2>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <button type="button" id="registerBtn" class="btn btn-primary">Register</button>
+        </div>
+        <div class="col">
+            <button type="button" id="loginBtn" class="btn btn-success">Login</button>
+        </div>
+    </div>
+</div>
+<footer>
+    <!-- Footer content -->
+</footer>
+<script th:src="@{/js/index.js}"></script>
+</body>
+</html>
