@@ -1,5 +1,7 @@
 $(document).ready(function() {
     // Initialize Select2 on the country dropdown
+
+
     $('#country').select2({
         placeholder: 'Select a country',
         allowClear: true
@@ -26,13 +28,77 @@ $(document).ready(function() {
         }
     });
     $('#saveDatas').on('click',function(){
-     alert('Save Button clicked')
+    alert("request sent");
+
         var name =$('#name').val();
         var email =$('#email').val();
         var dob =$('#datepicker').val();
-        var radioValue = $("input[name='gender']:checked").val();
+        var gender = $("input[name='gender']:checked").val();
         var country =$('#country').val();
         var imageUpload = $('#imageUpload')[0].files[0];
+
+        if(name == "" || name == null || name == undefined) {
+            alert("Please Enter the employee name");
+            $('#name').focus();
+            return;
+        }
+      else if(email == "" || email == null || email == undefined) {
+            alert("Please Enter the email ");
+            $('#email').focus();
+            return;
+        }
+        else if(dob == "" || dob == null || dob == undefined) {
+            alert("Please select the date ");
+            $('#datepicker').focus();
+            return;
+        }
+        else if(gender == "" || gender == null || gender == undefined) {
+            alert("please select the gender ");
+            $('input[name="gender"]').first().focus();
+            return;
+        }
+        else if(country == "" || country == null || country == undefined) {
+            alert("Please select the country ");
+            $('#country').focus();
+            return;
+        }
+        else if(imageUpload == "" || imageUpload == null || imageUpload == undefined) {
+            alert("Please select the image ");
+            $('#imageUpload').focus();
+            return;
+        }
+        else{
+        alert("Gender = "+gender);
+            alert("ajax send to the controller");
+         var formData = new FormData();
+                formData.append('name', name);
+                formData.append('email',email);
+                formData.append('dob', dob);
+                formData.append('gender', gender);
+                formData.append('country', country);
+                formData.append('imageUpload', imageUpload);
+
+                $.ajax({
+                    url: '/saveData',
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                     dataType: 'text',
+                    success: function (response) {
+                      if(response == 'done')
+                      {
+                      alert('Success:', response);
+                      }
+
+
+
+                    },
+                    error: function (error) {
+                        alert('Error:', error);
+                    }
+                });
+        }
 
 
     });

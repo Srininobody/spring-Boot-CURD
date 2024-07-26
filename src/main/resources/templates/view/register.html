@@ -9,9 +9,9 @@
     <!-- Load Select2 CSS -->
     <link rel="stylesheet" href="/front end resource/select2/css/select2.min.css">
     <!-- Load Datepicker CSS last to ensure it overrides any conflicting styles -->
-    <link rel="stylesheet" href="/front end resource/datepicker/css/datepicker.min.css">
+    <link rel="stylesheet" href="/front end resource/datepicker/css/jquery-ui.css">
     <!-- Your custom CSS files -->
-    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/register.css?V=1.0">
     <link rel="stylesheet" href="/css/datepickerStyle.css">
 </head>
 <body>
@@ -39,7 +39,7 @@
 
     <div class="form-group row">
         <div class="col-2">
-            <label for="description" class="control-label">Date of Birth<span class="star">*</span></label>
+            <label class="control-label">Date of Birth<span class="star">*</span></label>
         </div>
         <div class="col-6">
             <input type="text" id="datepicker" placeholder="dd/mm/yyyy" autocomplete="off">
@@ -48,7 +48,7 @@
 
     <div class="form-group row">
         <div class="col-2">
-            <label for="description" class="control-label">Gender<span class="star">*</span></label>
+            <label  class="control-label">Gender<span class="star">*</span></label>
         </div>
         <div class="col-6">
             <label><input type="radio" name="gender" value="male" required> Male</label>
@@ -81,7 +81,6 @@
     <div class="form-group">
         <img id="imagePreview" class="img-preview d-none" alt="Image Preview">
     </div>
-
     <div>
         <button type="button" class="btn btn-primary" id="saveDatas">Save</button>
     </div>
@@ -95,11 +94,9 @@
 <!-- Load Select2 JS -->
 <script src="/front end resource/select2/js/select2.min.js"></script>
 <!-- Load Datepicker JS -->
-<script src="/front end resource/datepicker/js/datepicker.min.js"></script>
+<script src="/front end resource/datepicker/js/jquery-ui.js"></script>
 <!-- Your custom JS files -->
-<script src="/js/register.js"></script>
-<script>
+<script src="/js/register.js?V=1.0"></script>
 
-</script>
 </body>
 </html>

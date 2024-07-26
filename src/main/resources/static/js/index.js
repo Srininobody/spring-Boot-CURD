@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('#registerBtn').on('click',function(){
-        alert('Register Button clicked');
+        alert('Register Button clicked 123 ');
           window.location.href = '/register'
     });
 

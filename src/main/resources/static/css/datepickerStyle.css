@@ -1,0 +1,95 @@
+     /* Basic styling for the datepicker input field */
+     #datepicker {
+        width: 200px;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+    }
+
+    /* Styling for the datepicker popup */
+    .ui-datepicker {
+        font-size: 14px;
+        border: 1px solid #ddd; 
+        border-radius: 4px;
+        box-shadow: 0 2px 10px rgba(13, 168, 91, 0.1);
+    }
+    
+    .ui-datepicker-header { 
+        background: rgb(238,174,202);
+        background: radial-gradient(circle, rgba(238,174,202,0.9248074229691877) 18%, rgba(100,192,212,1) 96%);
+        color: #e21515;
+        border-bottom: 1px solid #60e06b;
+        padding: 10px;
+        border-radius: 4px 4px 0 0;
+        position: relative;
+    }
+
+    .ui-datepicker-title {
+        margin: 0;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .ui-datepicker-prev, .ui-datepicker-next {
+        position: absolute;
+        top: 20%;
+        
+        cursor: pointer;
+    }
+
+    .ui-datepicker-prev {   
+        left: 5px;
+    }
+
+    .ui-datepicker-next {
+        right: 5px;
+    }
+    .ui-datepicker-prev:hover, .ui-datepicker-next:hover {
+        background: #2031c9ec;
+        color: #fff;; /* Ensure icon is visible on hover */
+    }
+
+    .ui-datepicker-prev:hover::before, .ui-datepicker-next:hover::before {
+        color: #fff; /* Ensure icon color is white on hover */
+    }
+
+    .ui-datepicker-calendar {
+        border: none;
+        border-radius: 0 0 4px 4px;
+    }
+
+    .ui-datepicker-calendar th {
+        background: #758391;
+        font-weight: bold;
+    }
+
+    .ui-datepicker-calendar td {
+        padding: 5px;
+        text-align: center;
+    }
+
+    .ui-datepicker-calendar a {
+        text-decoration: none;
+        color: #6fbbe7;
+    }
+
+    .ui-datepicker-calendar a:hover {
+        background: #ac4d71;
+        border-radius: 4px;
+    }
+
+    .ui-datepicker-calendar .ui-state-active {
+        background: #007bff;
+        color: #c24646;
+        border-radius: 50%;
+    }
+
+    .ui-datepicker-calendar .ui-state-hover {
+        background: #5eaf79;
+    }
+    .ui-datepicker-calendar tbody {
+        background-color: #d67e7e; /* Set your desired background color */
+    }
