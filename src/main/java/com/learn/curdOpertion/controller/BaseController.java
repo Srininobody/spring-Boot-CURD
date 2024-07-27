@@ -15,6 +15,11 @@ public class BaseController {
         System.out.println("this page registe function is called");
         return "/view/register";
     }
+    @GetMapping("/userDetailsPage")
+    public String userDetails() {
+        System.out.println("this page registe function is called");
+        return "/view/userDetails";
+    }
 
     @GetMapping("/login")
     public String loginPage() {

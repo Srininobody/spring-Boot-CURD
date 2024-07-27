@@ -5,9 +5,12 @@ import com.learn.curdOpertion.repository.AppUserRespository;
 import com.learn.curdOpertion.service.AppUserService;
 import com.learn.curdOpertion.service.DirectoryFinderService;
 import com.learn.curdOpertion.serviceImpl.AppUserServiceImpl;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -17,6 +20,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 public class AppUserController {
@@ -110,4 +114,25 @@ public class AppUserController {
 
         return res;
     }
+    @GetMapping("/getAllUser")
+    public @ResponseBody String getAllUser(){
+
+        JSONArray jsonArray = new JSONArray();
+        List<AppUser> userList = appUserService.getAllUser();
+        for(AppUser user : userList){
+            JSONObject userJson = new JSONObject();
+            userJson.put("name" ,user.getName());
+
+            userJson.put("email",user.getEmail());
+            userJson.put("dob",user.getDob());
+            userJson.put("gender",user.getGender());
+            userJson.put("country", user.getCountry());
+            userJson.put("photo",user.getProfilePic());
+            jsonArray.add(userJson);
+        }
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("users", jsonArray);
+        return jsonObject.toString();
+    }
+
 }
