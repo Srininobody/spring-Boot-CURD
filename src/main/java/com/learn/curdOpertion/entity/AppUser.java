@@ -3,7 +3,7 @@ package com.learn.curdOpertion.entity;
 
 import jakarta.persistence.*;
 
-import java.sql.Date;
+import java.util.Date;
 
 @Entity
 public class AppUser {
@@ -17,7 +17,7 @@ public class AppUser {
     @Column(name = "email",length = 50,nullable = false)
     private String email;
 
-    @Column(name = "Date_of_birth", length = 30,nullable = false)
+    @Column(name = "Date_of_birth",nullable = false)
     private Date dob;
 
     @Column(name = "gender",length = 30,nullable = false)
