@@ -13,3 +13,25 @@ h2{
     background-color: bisque;
     text-align: center;
 }
+ table td {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Style for the image inside table cells */
+  table td img {
+    display: block; /* Removes extra space below the image */
+    margin: 0 auto; /* Centers the image horizontally if needed */
+    max-width: 100px; /* Sets a maximum width for the image */
+    max-height: 100px; /* Sets a maximum height for the image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+
+  /* Optional: Adjust the alignment of table headers */
+  table th {
+    text-align: center; /* Centers the text inside table headers */
+  }
+  .displayImg{
+   background-color: black;
+  }
+</style>

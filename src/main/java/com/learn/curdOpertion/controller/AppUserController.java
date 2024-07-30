@@ -1,6 +1,7 @@
 package com.learn.curdOpertion.controller;
 
 import com.learn.curdOpertion.entity.AppUser;
+import com.learn.curdOpertion.excelDownload.UserExcel;
 import com.learn.curdOpertion.repository.AppUserRespository;
 import com.learn.curdOpertion.service.AppUserService;
 import com.learn.curdOpertion.service.DirectoryFinderService;
@@ -8,6 +9,7 @@ import com.learn.curdOpertion.serviceImpl.AppUserServiceImpl;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,9 +27,12 @@ import java.util.List;
 @Controller
 public class AppUserController {
     @Autowired
-   private DirectoryFinderService directoryFinderService;
+    private DirectoryFinderService directoryFinderService;
     @Autowired
     private AppUserService appUserService;
+
+    @Autowired
+    private UserExcel userExcel;
 
     SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -119,12 +124,16 @@ public class AppUserController {
 
         JSONArray jsonArray = new JSONArray();
         List<AppUser> userList = appUserService.getAllUser();
+        System.out.println("output Size = "+userList.size());
         for(AppUser user : userList){
             JSONObject userJson = new JSONObject();
             userJson.put("name" ,user.getName());
 
             userJson.put("email",user.getEmail());
-            userJson.put("dob",user.getDob());
+            Date dd = user.getDob();
+            String date = format.format(dd);
+            System.out.println("Dob = "+date);
+            userJson.put("dob" , date);
             userJson.put("gender",user.getGender());
             userJson.put("country", user.getCountry());
             userJson.put("photo",user.getProfilePic());
@@ -133,6 +142,10 @@ public class AppUserController {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("users", jsonArray);
         return jsonObject.toString();
+    }
+    @GetMapping("/downloadUserDetailsExcel")
+    public ResponseEntity<InputStreamResource> downloadUserDetailsExcel() throws IOException {
+        return  userExcel.userDetailsUpdateExcel();
     }
 
 }

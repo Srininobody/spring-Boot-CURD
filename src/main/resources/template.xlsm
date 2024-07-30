@@ -1,0 +1,25 @@
+Private Sub Worksheet_Change(ByVal Target As Range)
+    Dim OldVal As String
+    Dim NewVal As String
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Sheets("Sheet1")
+
+    On Error GoTo Exitsub
+
+    If Target.Column = 4 And Target.Validation.Type = 3 Then
+        Application.EnableEvents = False
+        NewVal = Target.Value
+        Application.Undo
+        OldVal = Target.Value
+        Target.Value = NewVal
+        If OldVal <> "" Then
+            If NewVal <> "" Then
+                Target.Value = OldVal & ", " & NewVal
+            Else
+                Target.Value = OldVal
+            End If
+        End If
+    End If
+Exitsub:
+    Application.EnableEvents = True
+End Sub

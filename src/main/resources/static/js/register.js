@@ -102,4 +102,9 @@ $(document).ready(function() {
 
 
     });
+
+     $('#userDetailsExcel').on('click', function() {
+     alert("callling ")
+            window.location.href = '/downloadUserDetailsExcel';
+        });
 });
