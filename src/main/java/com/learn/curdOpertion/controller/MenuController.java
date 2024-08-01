@@ -56,7 +56,7 @@ public class MenuController {
             JSONObject responseObj = new JSONObject();
             Long id = (Long) arr[0];
             String name =(String) arr[1];
-            
+
             System.out.println("------------> trip code = "+id);
             System.out.println("------------> trip name = "+name);
             responseObj.put("code", id);

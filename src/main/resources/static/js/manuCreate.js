@@ -65,7 +65,15 @@ $.ajax({
                 processData: false,
                 contentType: false,
                 success: function(response) {
-                    alert(response);
+
+                    if(response == 'S')
+                    {
+                    alert("Menu Created Successfully.");
+                      location.reload(); // Refresh the page
+                    }
+                    else{
+                     alert("something Error...");
+                    }
                 },
                 error: function(err) {
                     alert(err);
