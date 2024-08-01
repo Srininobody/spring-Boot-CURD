@@ -7,6 +7,10 @@ $(document).ready(function(){
             alert('Register Button clicked 123 ');
               window.location.href = '/userDetailsPage'
         });
+         $('#menuCreate').on('click',function(){
+
+                      window.location.href = '/manuCreate'
+                });
 
     $('#loginBtn').on('click',function(){
         alert('Login Button clicked')

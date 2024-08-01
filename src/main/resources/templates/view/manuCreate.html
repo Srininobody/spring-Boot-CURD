@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataTable Example</title>
+
+    <link rel="stylesheet" href="/front end resource/bootstrap/css/bootstrap.min.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="/front end resource/dataTable/css/datatables.min.css">
+    <link rel="stylesheet" href="/front end resource/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/manuCreate.css">
+</head>
+<body>
+    <div class="container mt-5" id="inputForm">
+        <div class="form-container">
+            <h3 class="mb-4">Form Heading <i class="bi bi-pencil-fill edit-icon" id="editBtn"></i></h3>
+            
+            <form>
+                <div class="form-group">
+                    <label >Menu name</label>
+                    <input type="text" class="form-control" id="menuName" placeholder="Enter Menu Name">
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label >Select Parent </label>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" id="parent">
+                            <option value="-1">select the parent</option>
+                            <option value="0">No Parent </option>
+                            
+                            </select>
+                    </div> 
+                </div>
+
+                <div class="row">
+                    <button type="button" id="submitBtn" class="btn btn-primary">Submit</button>
+                </div>
+               
+            </form>
+        </div>
+    </div>
+    <div class="contain" id="tableView">
+        <h1>User Details</h1>
+        <table id="userTables" class="display">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Manu Name</th>
+                    <th>Parent Id</th>
+                    <th>Parant name</th>
+                    <th>status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody  id="tableBody">
+               
+            </tbody>
+        </table>
+        <div class="row backBtn" >
+            <button type="button" id="backBtns" class="btn btn-primary">Back</button>
+        </div>
+    </div>
+    
+    <footer>
+
+    </footer>
+    <!-- jQuery -->
+    <script src="/front end resource/Jquery/jquery.min.js"></script>
+    <!-- Load Bootstrap JS -->
+    <script src="/front end resource/bootstrap/js/bootstrap.min.js"></script>
+      <!-- DataTables JS -->
+      <script src="/front end resource/dataTable/js/datatables.min.js"></script>
+      <script src="/js/manuCreate.js?v=1.0"></script>
+    <script>
+       
+    </script>
+</body>
+</html>

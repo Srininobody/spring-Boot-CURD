@@ -1,0 +1,28 @@
+.form-container {
+    background: rgba(230, 236, 143, 0.8); /* White transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 500px; /* Adjust as needed */
+    margin: auto;
+}
+.edit-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #54720d;
+    cursor: pointer;
+}
+.backBtn{
+   
+    margin-left: 90%;
+}
+/* Custom styles for DataTables pagination buttons */
+.dt-paging-button{
+    border: 1px solid yellowgreen;
+}
+   
+
+

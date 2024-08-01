@@ -20,6 +20,11 @@ public class BaseController {
         System.out.println("this page registe function is called");
         return "/view/userDetails";
     }
+    @GetMapping("/manuCreate")
+    public String menuCreate() {
+        System.out.println("this page manuCreate function is called");
+        return "/view/manuCreate";
+    }
 
     @GetMapping("/login")
     public String loginPage() {
