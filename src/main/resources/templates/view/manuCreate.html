@@ -46,12 +46,12 @@
         <table id="userTables" class="display">
             <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Manu Name</th>
-                    <th>Parent Id</th>
-                    <th>Parant name</th>
-                    <th>status</th>
-                    <th>Action</th>
+                    <th class="r1">Id</th>
+                    <th class="r2">Manu Name</th>
+                    <th class="r3">Parent Id</th>
+                    <th class="r4">Parant name</th>
+                    <th class="r5">status</th>
+                    <th class="r6">Action</th>
                 </tr>
             </thead>
             <tbody  id="tableBody">
@@ -60,6 +60,58 @@
         </table>
         <div class="row backBtn" >
             <button type="button" id="backBtns" class="btn btn-primary">Back</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateModalLabel">Update Menu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateForm">
+                        <!-- Hidden Field -->
+                        <input type="hidden" id="editId" value="someHiddenValue">
+                        <div class="form-group">
+                            <label for="inputField1">Menu name</label>
+                            <input type="text" class="form-control" id="editMenuName" placeholder="Enter Menu Name">
+                        </div>
+
+                        <!-- Name Field -->
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label for="inputField2">Select Parent </label>
+                            </div>
+                            <div class="col">
+                                <select class="form-control" id="editParent">
+                                    <option value="0">No Parent </option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Status Field -->
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label for="status">Status</label>
+                            </div>
+                            <div class="col">
+                                <select class="form-control" id="editStatus">
+                                    <option value="L">Active</option>
+                                    <option value="X">In-Active</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="button" id="editSave" class="btn btn-primary editUpdateBtn">save</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -72,7 +124,7 @@
     <script src="/front end resource/bootstrap/js/bootstrap.min.js"></script>
       <!-- DataTables JS -->
       <script src="/front end resource/dataTable/js/datatables.min.js"></script>
-      <script src="/js/manuCreate.js?v=1.0"></script>
+      <script src="/js/manuCreate.js?v=1.1"></script>
     <script>
        
     </script>

@@ -18,6 +18,13 @@ $(document).ready(function() {
                 // Populate table with user data
                 users.forEach(function(user) {
                     var row = $('<tr></tr>');
+                    // Hidden input for the user ID
+                    var hiddenId = $('<input>', {
+                        type: 'hidden',
+                        class: 'userId',
+                        value: user.id
+                    });
+                    row.append(hiddenId);
 
                     row.append('<td>' + user.name + '</td>');
                     row.append('<td>' + user.email + '</td>');
@@ -58,6 +65,7 @@ $(document).ready(function() {
                 $('.updateBtn').on('click', function() {
                     var row = $(this).closest('tr');
                     var rowData = {
+                         id: row.find('.userId').val(),
                         name: row.find('td:eq(0)').text(),
                         email: row.find('td:eq(1)').text(),
                         dob: row.find('td:eq(2)').text(),

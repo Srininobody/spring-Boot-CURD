@@ -127,6 +127,7 @@ public class AppUserController {
         System.out.println("output Size = "+userList.size());
         for(AppUser user : userList){
             JSONObject userJson = new JSONObject();
+            userJson.put("id",user.getId());
             userJson.put("name" ,user.getName());
 
             userJson.put("email",user.getEmail());
