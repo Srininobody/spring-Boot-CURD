@@ -1,0 +1,39 @@
+/* navbar.css */
+.navbar{
+    background-color: #d3ebb9 !important; /* Dark background */
+}
+.custom-navbar {
+    background-color: #676869 !important; /* Dark background */
+}
+
+.navbar-brand {
+    color: #d46969 !important; /* White text color */
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #44a16e !important; /* White text color */
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #5f97d3 !important; /* Blue text color on hover */
+    text-decoration: underline;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #343a40; /* Dark background for dropdown */
+    border: none;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: #c962a1; /* White text color */
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: #161414; /* White text color */
+}

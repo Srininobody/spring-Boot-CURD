@@ -116,4 +116,10 @@ public class MenuController {
         System.out.println(">>>>>>>> = "+jsonObject1.toString());
         return jsonObject1.toString();
     }
+
+    @GetMapping("/active")
+    public @ResponseBody List<Menu> getAllActiveMenus() {
+        System.out.println("this nav bar active controlle is called");
+        return menuService.getAllActiveMenus();
+    }
 }

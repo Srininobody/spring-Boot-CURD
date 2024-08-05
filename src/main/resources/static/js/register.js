@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // Initialize Select2 on the country dropdown
-
+  $("#navbar-placeholder1").load("/navbar.html");
 
     $('#country').select2({
         placeholder: 'Select a country',

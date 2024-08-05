@@ -12,4 +12,5 @@ public interface MenuService {
     public List<Menu> getAll();
 
     public List<Object []> getAllParent();
+    public List<Menu> getAllActiveMenus();
 }

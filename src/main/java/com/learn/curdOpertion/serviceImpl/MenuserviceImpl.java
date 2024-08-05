@@ -53,4 +53,9 @@ public class MenuserviceImpl implements MenuService {
         System.out.println(">>>>>>>>>>>>>>> Qury = "+query);
         return  entityManager.createNativeQuery(query).getResultList();
     }
+
+    @Override
+    public List<Menu> getAllActiveMenus() {
+        return menuRepositroy.findAllActiveMenus();
+    }
 }

@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index Page</title>
-    <link rel="stylesheet" th:href="@{/front end resource/bootstrap/css/bootstrap.min.css}">
-    <link rel="stylesheet" th:href="@{/css/index.css}">
-    <script th:src="@{/front end resource/Jquery/jquery.min.js}"></script>
-    <script th:src="@{/front end resource/bootstrap/js/bootstrap.min.js}"></script>
+    <link rel="stylesheet" href="/frontendresource/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+
 </head>
 <body>
 <header>
-    <h2>Welcome to Spring Boot</h2>
+    <div id="navbar-placeholder0"></div>
 </header>
 <div class="container">
     <div class="row">
@@ -25,6 +24,9 @@
             <button type="button" id="menuCreate" class="btn btn-primary">create Menu</button>
         </div>
         <div class="col">
+            <button type="button" id="navbars" class="btn btn-primary">Nav Bar</button>
+        </div>
+        <div class="col">
             <button type="button" id="loginBtn" class="btn btn-success">Login</button>
         </div>
     </div>
@@ -32,6 +34,8 @@
 <footer>
     <!-- Footer content -->
 </footer>
-<script th:src="@{/js/index.js?v=1.0}"></script>
+<script src="/frontendresource/Jquery/jquery.min.js"></script>
+<script src="/frontendresource/bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/index.js?v=1.1"></script>
 </body>
 </html>

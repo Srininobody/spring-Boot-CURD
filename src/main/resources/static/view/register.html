@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index Page</title>
     <!-- Load Bootstrap CSS first -->
-    <link rel="stylesheet" href="/front end resource/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/frontendresource/bootstrap/css/bootstrap.min.css">
     <!-- Load Select2 CSS -->
-    <link rel="stylesheet" href="/front end resource/select2/css/select2.min.css">
+    <link rel="stylesheet" href="/frontendresource/select2/css/select2.min.css">
     <!-- Load Datepicker CSS last to ensure it overrides any conflicting styles -->
-    <link rel="stylesheet" href="/front end resource/datepicker/css/jquery-ui.css">
+    <link rel="stylesheet" href="/ffrontendresource/datepicker/css/jquery-ui.css">
+
+    <!-- Load jQuery before other scripts -->
+    <script src="/frontendresource/Jquery/jquery.min.js"></script>
+    <!-- Load Bootstrap JS -->
+    <script src="/frontendresource/bootstrap/js/bootstrap.min.js"></script>
     <!-- Your custom CSS files -->
     <link rel="stylesheet" href="/css/register.css?V=1.0">
     <link rel="stylesheet" href="/css/datepickerStyle.css">
 </head>
 <body>
 <header>
-    <h2>Register Form</h2>
+    <div id="navbar-placeholder1"></div>
 </header>
 <div class="container">
     <div class="form-group row">
@@ -88,14 +93,11 @@
 </div>
 <footer>
 </footer>
-<!-- Load jQuery before other scripts -->
-<script src="/front end resource/Jquery/jquery.min.js"></script>
-<!-- Load Bootstrap JS -->
-<script src="/front end resource/bootstrap/js/bootstrap.min.js"></script>
+
 <!-- Load Select2 JS -->
-<script src="/front end resource/select2/js/select2.min.js"></script>
+<script src="/frontendresource/select2/js/select2.min.js"></script>
 <!-- Load Datepicker JS -->
-<script src="/front end resource/datepicker/js/jquery-ui.js"></script>
+<script src="/frontendresource/datepicker/js/jquery-ui.js"></script>
 <!-- Your custom JS files -->
 <script src="/js/register.js?V=1.1"></script>
 
